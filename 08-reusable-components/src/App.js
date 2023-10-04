@@ -1,19 +1,11 @@
+// import { useState } from "react";
 import "./App.css";
 import MyComponent from "./components/MyComponent";
+// import persons from "./data/persons";
 
+const num = 10;
 function App() {
-    const obj = {
-        name: "Daniil",
-        age: 25,
-        city: "Tyumen",
-        hasPet: true,
-    };
-
-    return (
-        <div className="App">
-            <MyComponent obj={obj} />
-        </div>
-    );
+    return <div className="App">{num < 20 && <MyComponent />}</div>;
 }
 
 export default App;
