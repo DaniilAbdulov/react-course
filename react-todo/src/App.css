@@ -3,10 +3,21 @@
     max-width: 600px;
     margin: 0 auto;
 }
+.active {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
 body {
     color: white;
     background-color: #112d49;
 }
 h1 {
     margin-bottom: 24px;
+}
+a {
+    color: aqua;
+}
+nav a {
+    margin: 15px;
 }

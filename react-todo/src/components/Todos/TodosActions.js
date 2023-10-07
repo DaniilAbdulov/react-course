@@ -5,7 +5,6 @@ function TodosActions({
     clearCompletedTodos,
     completedTodosExist,
 }) {
-    console.log(completedTodosExist);
     return (
         <>
             <Button title="Reset todos" onClick={deleteTodos}>

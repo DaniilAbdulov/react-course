@@ -1,60 +1,34 @@
-import { useState } from "react";
-import "./App.css";
-import TodoForm from "./components/Todos/TodoForm";
-import TodoList from "./components/Todos/TodoList";
-import TodosActions from "./components/Todos/TodosActions";
-function App() {
-    const [todos, setTodos] = useState([]);
-    const addTodoHandler = (text) => {
-        const newTodo = {
-            text: text,
-            isCompleted: false,
-            id: Date.now(),
-        };
-        setTodos([...todos, newTodo]);
-    };
-    const deleteTodoHandler = (index) => {
-        setTodos(todos.filter((todo) => todo.id !== index));
-    };
-    const toggleTodoHandler = (id) => {
-        setTodos(
-            todos.map((todo) =>
-                todo.id === id
-                    ? { ...todo, isCompleted: !todo.isCompleted }
-                    : { ...todo }
-            )
-        );
-    };
-    const deleteAllTodosHandler = () => {
-        setTodos([]);
-    };
-    const clearCompletedTodosHandler = () => {
-        setTodos(todos.filter((todo) => !todo.isCompleted));
-    };
-    const completedTodosCount = todos.filter((todo) => todo.isCompleted).length;
-    return (
-        <div className="App">
-            <h1>Todo app</h1>
-            <TodoForm addTodo={addTodoHandler} />
-            {!!todos.length && (
-                <TodosActions
-                    deleteTodos={deleteAllTodosHandler}
-                    clearCompletedTodos={clearCompletedTodosHandler}
-                    completedTodosExist={!!completedTodosCount} //что бы конвертировать в bool
-                />
-            )}
+// import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-            <TodoList
-                todos={todos}
-                deleteTodo={deleteTodoHandler}
-                toggleTodo={toggleTodoHandler}
-            />
-            {completedTodosCount > 0 && (
-                <h2>{`You have completed ${completedTodosCount} ${
-                    completedTodosCount > 1 ? "todos" : "todo"
-                }`}</h2>
-            )}
-        </div>
+import "./App.css";
+import TodoPage from "./views/TodoPage";
+import Contacts from "./components/Contacts";
+import About from "./components/About";
+import MainLayout from "./Layouts/MainLayout";
+import Home from "./components/Home";
+import Courses from "./components/Courses";
+import SingleCourse from "./components/SingleCourse";
+function App() {
+    return (
+        <BrowserRouter>
+            <div className="App">
+                <Routes>
+                    <Route path="/" element={<MainLayout />}>
+                        <Route index element={<Home />} />
+                        <Route path="todos" element={<TodoPage />} />
+                        <Route path="about" element={<About />} />
+                        <Route path="contacts" element={<Contacts />} />
+                        <Route path="courses" element={<Courses />} />
+                        <Route
+                            path="courses/:courseSlug"
+                            element={<SingleCourse />}
+                        />
+                        <Route path="*" element={<h2>Page not found</h2>} />
+                    </Route>
+                </Routes>
+            </div>
+        </BrowserRouter>
     );
 }
 
