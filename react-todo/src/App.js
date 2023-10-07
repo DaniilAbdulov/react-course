@@ -9,6 +9,8 @@ import MainLayout from "./Layouts/MainLayout";
 import Home from "./components/Home";
 import Courses from "./components/Courses";
 import SingleCourse from "./components/SingleCourse";
+import { useState } from "react";
+
 function App() {
     return (
         <BrowserRouter>
