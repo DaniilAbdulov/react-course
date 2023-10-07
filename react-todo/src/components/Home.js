@@ -1,12 +1,15 @@
 import { useState } from "react";
+import UserContext from "../context/UserContext";
 import User from "../components/User";
+
 function Home() {
-    const [user, setUser] = useState("Daniil");
+    const [userName, setUserName] = useState("");
 
     return (
-        <>
-            <User user={user} />
-        </>
+        <UserContext.Provider value={{ userName, changeUserName: setUserName }}>
+            <User />
+        </UserContext.Provider>
     );
 }
+
 export default Home;
