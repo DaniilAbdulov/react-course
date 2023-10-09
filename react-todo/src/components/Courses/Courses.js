@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import courses from "../data/courses";
+import courses from "../../data/courses";
 
 function Courses() {
     return (

@@ -1,4 +1,4 @@
-import courses from "../data/courses";
+import courses from "../../data/courses";
 import { Link, useParams } from "react-router-dom";
 function SingleCourse() {
     const params = useParams();
