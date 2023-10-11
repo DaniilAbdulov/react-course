@@ -7,7 +7,6 @@ function BookList() {
     const books = useSelector((state) => state.books);
     //подписались на обновление state В redux
     const dispatch = useDispatch();
-
     const handleDeleteBook = (id) => {
         dispatch(deleteBook(id));
     };

@@ -16,7 +16,6 @@ function BookForm() {
                 author: author,
                 isFavorite: false,
             };
-
             dispatch(addBook(book));
             //отправляем книгу в store
             setTitle("");
