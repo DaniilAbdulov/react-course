@@ -14,6 +14,7 @@ function BookForm() {
                 id: Date.now(),
                 title: title,
                 author: author,
+                isFavorite: false,
             };
 
             dispatch(addBook(book));
