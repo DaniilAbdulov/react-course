@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     title: "",
+    author: "",
 };
 const filterSlice = createSlice({
     name: "filter",
@@ -13,6 +14,9 @@ const filterSlice = createSlice({
             //библоитеке immor в toolkit
             // return { ...state, title: action.payload };
         },
+        setAuthorFilter: (state, action) => {
+            state.author = action.payload;
+        },
         resetFilters: (state) => {
             return initialState;
         },
@@ -22,6 +26,8 @@ const filterSlice = createSlice({
 // console.log(filterSlice.actions.setTitleFilter("test"));
 //{type: 'filter/setTitleFilter', payload: 'test'}
 
-export const { setTitleFilter, resetFilters } = filterSlice.actions;
+export const { setTitleFilter, resetFilters, setAuthorFilter } =
+    filterSlice.actions;
 export const selectTitleFilter = (state) => state.filter.title; //выбрать из стэйта тайтл
+export const selectAuthorFilter = (state) => state.filter.author; //выбрать из стэйта автора
 export default filterSlice.reducer;

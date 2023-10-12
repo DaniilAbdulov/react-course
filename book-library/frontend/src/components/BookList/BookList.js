@@ -3,17 +3,24 @@ import { useDispatch } from "react-redux";
 import { deleteBook, toggleFavorite } from "../../redux/Books/actionCreators";
 import { BsBookmarkStarFill, BsBookmarkStar } from "react-icons/bs";
 import "./BookList.css";
-import { selectTitleFilter } from "../../redux/slices/filterSlice";
+import {
+    selectTitleFilter,
+    selectAuthorFilter,
+} from "../../redux/slices/filterSlice";
 function BookList() {
     const books = useSelector((state) => state.books);
     const titleFilter = useSelector(selectTitleFilter);
+    const authorFilter = useSelector(selectAuthorFilter);
     //подписались на обновление state В redux
 
     const filteredBooks = books.filter((book) => {
         const mathesTitle = book.title
             .toLowerCase()
             .includes(titleFilter.toLowerCase());
-        return mathesTitle;
+        const mathesAuthor = book.author
+            .toLowerCase()
+            .includes(authorFilter.toLowerCase());
+        return mathesTitle && mathesAuthor;
     });
     //
     const dispatch = useDispatch();
