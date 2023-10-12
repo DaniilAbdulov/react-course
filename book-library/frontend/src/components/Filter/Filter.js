@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
     setTitleFilter,
     selectTitleFilter,
+    resetFilters,
 } from "../../redux/slices/filterSlice";
 import "./Filter.css";
 function Filter() {
@@ -10,15 +11,21 @@ function Filter() {
     const handleTitleFilterChange = (e) => {
         dispatch(setTitleFilter(e.target.value));
     };
+    const handleResetFilters = () => {
+        dispatch(resetFilters());
+    };
     return (
         <div className="app-block filter">
-            <div className="filter-group">
-                <input
-                    value={titleFilter}
-                    onChange={handleTitleFilterChange}
-                    type="text"
-                    placeholder="Filter by title"
-                />
+            <div className="filter-row">
+                <div className="filter-group">
+                    <input
+                        value={titleFilter}
+                        onChange={handleTitleFilterChange}
+                        type="text"
+                        placeholder="Filter by title"
+                    />
+                </div>
+                <button onClick={handleResetFilters}>Reset filters</button>
             </div>
         </div>
     );

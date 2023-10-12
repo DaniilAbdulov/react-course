@@ -8,7 +8,13 @@ const filterSlice = createSlice({
     initialState: initialState,
     reducers: {
         setTitleFilter: (state, action) => {
-            return { ...state, title: action.payload };
+            state.title = action.payload;
+            //state.title = action.payload; работает благодаря
+            //библоитеке immor в toolkit
+            // return { ...state, title: action.payload };
+        },
+        resetFilters: (state) => {
+            return initialState;
         },
     },
 });
@@ -16,6 +22,6 @@ const filterSlice = createSlice({
 // console.log(filterSlice.actions.setTitleFilter("test"));
 //{type: 'filter/setTitleFilter', payload: 'test'}
 
-export const setTitleFilter = filterSlice.actions.setTitleFilter;
+export const { setTitleFilter, resetFilters } = filterSlice.actions;
 export const selectTitleFilter = (state) => state.filter.title; //выбрать из стэйта тайтл
 export default filterSlice.reducer;
