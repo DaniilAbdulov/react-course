@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "title": "Great Bank Hoax, The",
+        "author": "Teddie",
+        "isFavorite": false
+    },
+    {
+        "id": 2,
+        "title": "Girlfight",
+        "author": "Noam",
+        "isFavorite": true
+    },
+    {
+        "id": 3,
+        "title": "The Substitute 2: School's Out",
+        "author": "Park",
+        "isFavorite": false
+    },
+    {
+        "id": 4,
+        "title": "Mr. & Mrs. Smith",
+        "author": "Merline",
+        "isFavorite": false
+    },
+    {
+        "id": 5,
+        "title": "Haunted Echoes",
+        "author": "Corey",
+        "isFavorite": false
+    },
+    {
+        "id": 6,
+        "title": "Teenage Mutant Ninja Turtles",
+        "author": "Arleyne",
+        "isFavorite": false
+    },
+    {
+        "id": 7,
+        "title": "Vidal Sassoon: The Movie",
+        "author": "Welby",
+        "isFavorite": true
+    },
+    {
+        "id": 8,
+        "title": "Lake City",
+        "author": "Matilde",
+        "isFavorite": false
+    },
+    {
+        "id": 9,
+        "title": "Agatha Christie's 'Ten Little Indians' (Ten Little Indians) (And Then There Were None)",
+        "author": "Edlin",
+        "isFavorite": true
+    },
+    {
+        "id": 10,
+        "title": "Fog, The",
+        "author": "Jamie",
+        "isFavorite": false
+    },
+    {
+        "id": 11,
+        "title": "Sasquatch: The Legend of Bigfoot",
+        "author": "Curry",
+        "isFavorite": false
+    },
+    {
+        "id": 12,
+        "title": "100 Girls",
+        "author": "Liuka",
+        "isFavorite": true
+    },
+    {
+        "id": 13,
+        "title": "Dazed and Confused",
+        "author": "Tiffani",
+        "isFavorite": false
+    },
+    {
+        "id": 14,
+        "title": "Rhino Season (Fasle kargadan) ",
+        "author": "Olympie",
+        "isFavorite": true
+    },
+    {
+        "id": 15,
+        "title": "Small Town in Texas, A",
+        "author": "Sydney",
+        "isFavorite": false
+    },
+    {
+        "id": 16,
+        "title": "My Life in Ruins",
+        "author": "Raychel",
+        "isFavorite": false
+    },
+    {
+        "id": 17,
+        "title": "Rain Over Santiago (Il pleut sur Santiago)",
+        "author": "Robby",
+        "isFavorite": true
+    },
+    {
+        "id": 18,
+        "title": "Dirties, The",
+        "author": "Gianina",
+        "isFavorite": false
+    },
+    {
+        "id": 19,
+        "title": "Possessed (Besat)",
+        "author": "Georgianne",
+        "isFavorite": true
+    },
+    {
+        "id": 20,
+        "title": "Dinosaurs: A Fun Filled Trip Back in Time",
+        "author": "Griswold",
+        "isFavorite": false
+    },
+    {
+        "id": 21,
+        "title": "Silk Stockings",
+        "author": "Goddart",
+        "isFavorite": true
+    },
+    {
+        "id": 22,
+        "title": "Strayed (égarés, Les)",
+        "author": "Claire",
+        "isFavorite": true
+    },
+    {
+        "id": 23,
+        "title": "XXY",
+        "author": "Link",
+        "isFavorite": true
+    },
+    {
+        "id": 24,
+        "title": "Rage of Angels: The Story Continues",
+        "author": "Cindie",
+        "isFavorite": false
+    },
+    {
+        "id": 25,
+        "title": "Canterville Ghost, The",
+        "author": "Pietra",
+        "isFavorite": true
+    },
+    {
+        "id": 26,
+        "title": "What Women Want",
+        "author": "Sergeant",
+        "isFavorite": true
+    },
+    {
+        "id": 27,
+        "title": "Voyage to the End of the Universe (Ikarie XB 1)",
+        "author": "Leonore",
+        "isFavorite": true
+    },
+    {
+        "id": 28,
+        "title": "Garfield: The Movie",
+        "author": "Cyndia",
+        "isFavorite": true
+    },
+    {
+        "id": 29,
+        "title": "Stereo",
+        "author": "Raynell",
+        "isFavorite": true
+    },
+    {
+        "id": 30,
+        "title": "Bonjour tristesse",
+        "author": "Pru",
+        "isFavorite": true
+    }
+]
