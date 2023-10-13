@@ -1,182 +1,122 @@
 [
     {
-        "id": 1,
-        "title": "Great Bank Hoax, The",
-        "author": "Teddie",
-        "isFavorite": false
+        "title": "Marquise of O, The (Marquise von O..., Die)",
+        "author": "Boffey"
     },
     {
-        "id": 2,
-        "title": "Girlfight",
-        "author": "Noam",
-        "isFavorite": true
+        "title": "All About My Mother (Todo sobre mi madre)",
+        "author": "Hollingdale"
     },
     {
-        "id": 3,
-        "title": "The Substitute 2: School's Out",
-        "author": "Park",
-        "isFavorite": false
+        "title": "Polyester",
+        "author": "Combes"
     },
     {
-        "id": 4,
-        "title": "Mr. & Mrs. Smith",
-        "author": "Merline",
-        "isFavorite": false
+        "title": "2012: Supernova",
+        "author": "Gypson"
     },
     {
-        "id": 5,
-        "title": "Haunted Echoes",
-        "author": "Corey",
-        "isFavorite": false
+        "title": "Woman in White, The",
+        "author": "Ainger"
     },
     {
-        "id": 6,
-        "title": "Teenage Mutant Ninja Turtles",
-        "author": "Arleyne",
-        "isFavorite": false
+        "title": "Alone with Her",
+        "author": "MacCrosson"
     },
     {
-        "id": 7,
-        "title": "Vidal Sassoon: The Movie",
-        "author": "Welby",
-        "isFavorite": true
+        "title": "Others, The",
+        "author": "Culpen"
     },
     {
-        "id": 8,
-        "title": "Lake City",
-        "author": "Matilde",
-        "isFavorite": false
+        "title": "Romantics, The",
+        "author": "Alwin"
     },
     {
-        "id": 9,
-        "title": "Agatha Christie's 'Ten Little Indians' (Ten Little Indians) (And Then There Were None)",
-        "author": "Edlin",
-        "isFavorite": true
+        "title": "Viimeiset rotannahat ",
+        "author": "Crann"
     },
     {
-        "id": 10,
-        "title": "Fog, The",
-        "author": "Jamie",
-        "isFavorite": false
+        "title": "Black Moon",
+        "author": "Langmead"
     },
     {
-        "id": 11,
-        "title": "Sasquatch: The Legend of Bigfoot",
-        "author": "Curry",
-        "isFavorite": false
+        "title": "Bloody Sunday",
+        "author": "Oloshkin"
     },
     {
-        "id": 12,
-        "title": "100 Girls",
-        "author": "Liuka",
-        "isFavorite": true
+        "title": "Lonely Guy, The",
+        "author": "Elsley"
     },
     {
-        "id": 13,
-        "title": "Dazed and Confused",
-        "author": "Tiffani",
-        "isFavorite": false
+        "title": "Horrible Bosses 2",
+        "author": "Szachniewicz"
     },
     {
-        "id": 14,
-        "title": "Rhino Season (Fasle kargadan) ",
-        "author": "Olympie",
-        "isFavorite": true
+        "title": "Running from Crazy",
+        "author": "Chaters"
     },
     {
-        "id": 15,
-        "title": "Small Town in Texas, A",
-        "author": "Sydney",
-        "isFavorite": false
+        "title": "Dinner, The (Cena, La)",
+        "author": "Ranscombe"
     },
     {
-        "id": 16,
-        "title": "My Life in Ruins",
-        "author": "Raychel",
-        "isFavorite": false
+        "title": "Greystone Park",
+        "author": "O'Fearguise"
     },
     {
-        "id": 17,
-        "title": "Rain Over Santiago (Il pleut sur Santiago)",
-        "author": "Robby",
-        "isFavorite": true
+        "title": "All Together, The",
+        "author": "McMurdo"
     },
     {
-        "id": 18,
-        "title": "Dirties, The",
-        "author": "Gianina",
-        "isFavorite": false
+        "title": "Triumph of the Nerds, The: The Rise of Accidental Empires",
+        "author": "Crowley"
     },
     {
-        "id": 19,
-        "title": "Possessed (Besat)",
-        "author": "Georgianne",
-        "isFavorite": true
+        "title": "Magic of Ordinary Days, The",
+        "author": "Willowby"
     },
     {
-        "id": 20,
-        "title": "Dinosaurs: A Fun Filled Trip Back in Time",
-        "author": "Griswold",
-        "isFavorite": false
+        "title": "Sunrise: A Song of Two Humans",
+        "author": "Joselevitz"
     },
     {
-        "id": 21,
-        "title": "Silk Stockings",
-        "author": "Goddart",
-        "isFavorite": true
+        "title": "Dragonquest",
+        "author": "Voyce"
     },
     {
-        "id": 22,
-        "title": "Strayed (égarés, Les)",
-        "author": "Claire",
-        "isFavorite": true
+        "title": "Fail-Safe",
+        "author": "Jansa"
     },
     {
-        "id": 23,
-        "title": "XXY",
-        "author": "Link",
-        "isFavorite": true
+        "title": "Adam & Steve",
+        "author": "Sygrove"
     },
     {
-        "id": 24,
-        "title": "Rage of Angels: The Story Continues",
-        "author": "Cindie",
-        "isFavorite": false
+        "title": "Diva",
+        "author": "Leindecker"
     },
     {
-        "id": 25,
-        "title": "Canterville Ghost, The",
-        "author": "Pietra",
-        "isFavorite": true
+        "title": "Master, The",
+        "author": "Seavers"
     },
     {
-        "id": 26,
-        "title": "What Women Want",
-        "author": "Sergeant",
-        "isFavorite": true
+        "title": "Helen of Troy",
+        "author": "Cornelius"
     },
     {
-        "id": 27,
-        "title": "Voyage to the End of the Universe (Ikarie XB 1)",
-        "author": "Leonore",
-        "isFavorite": true
+        "title": "Finding Bliss",
+        "author": "Brewett"
     },
     {
-        "id": 28,
-        "title": "Garfield: The Movie",
-        "author": "Cyndia",
-        "isFavorite": true
+        "title": "Seal Team Eight: Behind Enemy Lines",
+        "author": "MacHarg"
     },
     {
-        "id": 29,
-        "title": "Stereo",
-        "author": "Raynell",
-        "isFavorite": true
+        "title": "Double Dragon",
+        "author": "Busch"
     },
     {
-        "id": 30,
-        "title": "Bonjour tristesse",
-        "author": "Pru",
-        "isFavorite": true
+        "title": "Santo vs. las lobas",
+        "author": "Lindro"
     }
 ]

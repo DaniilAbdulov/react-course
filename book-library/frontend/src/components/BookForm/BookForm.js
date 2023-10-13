@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import axios from "axios";
 // import { addBook } from "../../redux/Books/actionCreators";
 import { addBook } from "../../redux/slices/booksSlice";
 import "./BookForm.css";
@@ -23,6 +24,24 @@ function BookForm() {
             setAuthor("");
         }
     };
+
+    const handleAddRandomBook = async () => {
+        try {
+            const res = await axios.get("http://localhost:4000/random-book");
+            if (res.data && res.data.title && res.data.author) {
+                const book = {
+                    id: Date.now(),
+                    title: res.data.title,
+                    author: res.data.author,
+                    isFavorite: false,
+                };
+                dispatch(addBook(book));
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
     return (
         <div className="app-block book-form">
             <h2>Add a new book</h2>
@@ -46,6 +65,9 @@ function BookForm() {
                     ></input>
                 </div>
                 <button type="submit">Add book</button>
+                <button type="button" onClick={handleAddRandomBook}>
+                    Add random book
+                </button>
             </form>
         </div>
     );
