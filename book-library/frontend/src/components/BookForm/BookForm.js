@@ -31,7 +31,7 @@ function BookForm() {
 
     const handleAddRandomBook = () => {
         // dispatch(thunkFunction);
-        dispatch(fetchBook());
+        dispatch(fetchBook("http://localhost:400/random-book"));
     };
 
     return (
