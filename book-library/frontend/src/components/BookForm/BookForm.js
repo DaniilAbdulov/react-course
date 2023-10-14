@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-
+import { FaSpinner } from "react-icons/fa";
 // import { addBook } from "../../redux/Books/actionCreators";
 // import { addBook, thunkFunction } from "../../redux/slices/booksSlice";
 import { setError } from "../../redux/slices/errorSlice";
@@ -9,6 +9,7 @@ import "./BookForm.css";
 function BookForm() {
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
+    const [isLoading, setIsloading] = useState(false);
     const dispatch = useDispatch();
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -29,9 +30,18 @@ function BookForm() {
         }
     };
 
-    const handleAddRandomBook = () => {
+    const handleAddRandomBook = async () => {
         // dispatch(thunkFunction);
-        dispatch(fetchBook("http://localhost:4000/random-book"));
+        try {
+            setIsloading(true);
+            await dispatch(
+                fetchBook("http://localhost:4000/random-book-delayed")
+            );
+        } finally {
+            setIsloading(false);
+        }
+
+        // dispatch(fetchBook("http://localhost:4000/random-book"));
     };
 
     return (
@@ -57,8 +67,21 @@ function BookForm() {
                     ></input>
                 </div>
                 <button type="submit">Add book</button>
-                <button type="button" onClick={handleAddRandomBook}>
-                    Add random book
+                <button
+                    type="button"
+                    onClick={handleAddRandomBook}
+                    disabled={isLoading}
+                >
+                    {isLoading ? (
+                        <>
+                            <span>Loading book</span>
+                            <FaSpinner className="spinner" />
+                        </>
+                    ) : (
+                        <>
+                            <span>Add random book</span>
+                        </>
+                    )}
                 </button>
             </form>
         </div>
