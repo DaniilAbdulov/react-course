@@ -25,7 +25,7 @@ function BookForm() {
             setTitle("");
             setAuthor("");
         } else {
-            dispatch(setError("You must fill title and author!"));
+            dispatch(setError("You must fill title and author!!"));
         }
     };
 
