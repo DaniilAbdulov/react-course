@@ -34,9 +34,8 @@ const booksSlice = createSlice({
             );
         },
     },
-    extraReducers: (builder) => {
-        builder.addCase(fetchBook.fulfilled, (state, action) => {
-            //если fetchBook получил статус fulfield, то будет выполнен callback
+    extraReducers: {
+        [fetchBook.fulfilled]: (state, action) => {
             if (action.payload.title && action.payload.author) {
                 const book = {
                     id: Date.now(),
@@ -46,9 +45,24 @@ const booksSlice = createSlice({
                 };
                 state.push(book);
             }
-        });
+        },
     },
 });
+// extraReducers: (builder) => {
+//     builder.addCase(fetchBook.fulfilled, (state, action) => {
+//если fetchBook получил статус fulfield, то будет выполнен callback
+//         if (action.payload.title && action.payload.author) {
+//             const book = {
+//                 id: Date.now(),
+//                 title: action.payload.title,
+//                 author: action.payload.author,
+//                 isFavorite: false,
+//             };
+//             state.push(book);
+//         }
+//     });
+// },
+// });
 // export const thunkFunction = async (dispatch, getState) => {
 //     try {
 //         const res = await axios.get("http://localhost:4000/random-book");
