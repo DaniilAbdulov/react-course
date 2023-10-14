@@ -1,7 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { setError } from "./errorSlice";
-const initialState = [];
+const initialState = {
+    books: [],
+    isLoading: false,
+};
 
 export const fetchBook = createAsyncThunk(
     "books/fetchBook",
@@ -21,35 +24,28 @@ const booksSlice = createSlice({
     initialState: initialState,
     reducers: {
         addBook: (state, action) => {
-            state.push(action.payload);
+            state.books.push(action.payload);
         },
         deleteBook: (state, action) => {
-            return state.filter((book) => book.id !== action.payload);
+            return {
+                ...state,
+                books: state.filter((book) => book.id !== action.payload),
+            };
         },
         toggleFavorite: (state, action) => {
-            return state.map((book) =>
-                book.id === action.payload
-                    ? { ...book, isFavorite: !book.isFavorite }
-                    : book
-            );
+            return state.books.forEach((book) => {
+                if (book.id === action.payload) {
+                    book.isFavorite = !book.isFavorite;
+                }
+            });
         },
     },
-    //     extraReducers: {
-    //         [fetchBook.fulfilled]: (state, action) => {
-    //             if (action.payload.title && action.payload.author) {
-    //                 const book = {
-    //                     id: Date.now(),
-    //                     title: action.payload.title,
-    //                     author: action.payload.author,
-    //                     isFavorite: false,
-    //                 };
-    //                 state.push(book);
-    //             }
-    //         },
-    //     },
-    extraReducers: (builder) => {
-        builder.addCase(fetchBook.fulfilled, (state, action) => {
-            // если fetchBook получил статус fulfield, то будет выполнен callback
+    extraReducers: {
+        [fetchBook.pending]: (state) => {
+            state.isLoading = true;
+        },
+        [fetchBook.fulfilled]: (state, action) => {
+            state.isLoading = false;
             if (action.payload.title && action.payload.author) {
                 const book = {
                     id: Date.now(),
@@ -57,10 +53,27 @@ const booksSlice = createSlice({
                     author: action.payload.author,
                     isFavorite: false,
                 };
-                state.push(book);
+                state.books.push(book);
             }
-        });
+        },
+        [fetchBook.rejected]: (state) => {
+            state.isLoading = false;
+        },
     },
+    // extraReducers: (builder) => {
+    //     builder.addCase(fetchBook.fulfilled, (state, action) => {
+    //         // если fetchBook получил статус fulfield, то будет выполнен callback
+    //         if (action.payload.title && action.payload.author) {
+    //             const book = {
+    //                 id: Date.now(),
+    //                 title: action.payload.title,
+    //                 author: action.payload.author,
+    //                 isFavorite: false,
+    //             };
+    //             state.books.push(book);
+    //         }
+    //     });
+    // },
 });
 // export const thunkFunction = async (dispatch, getState) => {
 //     try {
@@ -79,6 +92,7 @@ const booksSlice = createSlice({
 //     }
 // };
 export const { addBook, deleteBook, toggleFavorite } = booksSlice.actions;
-export const selectBooks = (state) => state.books;
+export const selectBooks = (state) => state.books.books;
+export const selectIsLoading = (state) => state.books.isLoading;
 
 export default booksSlice.reducer;
