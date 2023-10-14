@@ -1,9 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-const initialState = {
-    books: [],
-    errorMessage: "",
-};
+const initialState = [];
 
 export const fetchBook = createAsyncThunk("books/fetchBook", async () => {
     const res = await axios.get("http://localhost:4000/random-book");
@@ -40,9 +37,6 @@ const booksSlice = createSlice({
                 };
                 state.push(book);
             }
-        });
-        builder.addCase(fetchBook.rejected, (state, action) => {
-            state.errorMessage = action.error.message;
         });
     },
 });
