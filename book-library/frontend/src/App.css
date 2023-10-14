@@ -5,7 +5,9 @@
     justify-content: center;
     text-align: center;
 }
-
+h1 {
+    text-align: center;
+}
 .app-header {
     background-color: #0a1a2d;
     color: #fff;

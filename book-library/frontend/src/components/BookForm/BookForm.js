@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 
 // import { addBook } from "../../redux/Books/actionCreators";
 // import { addBook, thunkFunction } from "../../redux/slices/booksSlice";
+import { setError } from "../../redux/slices/errorSlice";
 import { addBook, fetchBook } from "../../redux/slices/booksSlice";
 import "./BookForm.css";
 function BookForm() {
@@ -23,6 +24,8 @@ function BookForm() {
             //отправляем книгу в store
             setTitle("");
             setAuthor("");
+        } else {
+            dispatch(setError("You must fill title and author!"));
         }
     };
 
